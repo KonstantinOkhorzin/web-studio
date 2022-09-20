@@ -1,0 +1,30 @@
+:root {
+  --main-text-color: #212121;
+  --secondary-text-color: #757575;
+  --accent-color: #2196F3;
+  --white-color: #FFFFFF;
+  --black-color: #000000;
+}
+
+
+.page {
+    color: var(--main-text-color);
+}
+
+.logo {
+  color: var(--black-color);
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+}
+
+.logo mark {
+  color: var(--accent-color);
+}
+
+.btn {
+  color: var(--white-color);
+  background-color: var(--accent-color);
+}
