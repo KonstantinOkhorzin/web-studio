@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="uk">
 
 <head>
     <meta charset="UTF-8">
@@ -335,12 +335,52 @@
                     <use href="./img/sprite.svg#close"></use>
                 </svg>
             </button>
+            <b class="modal__title">Залиште свої дані, ми вам передзвонимо</b>
+            <form class="modal__form feedback-form">
+                <div class="feedback-form__inputs-group">
+                    <label class="feedback-form__field">
+                        <input class="feedback-form__input" type="text" name="name" placeholder=" ">
+                        <span class="feedback-form__label">Ім'я</span>
+                        <svg class="feedback-form__icon">
+                            <use href="./img/sprite.svg#person"></use>
+                        </svg>
+                    </label>
+                    <label class="feedback-form__field">
+                        <input class="feedback-form__input" type="tel" name="tel" placeholder=" ">
+                        <span class="feedback-form__label">Телефон</span>
+                        <svg class="feedback-form__icon">
+                            <use href="./img/sprite.svg#phone"></use>
+                        </svg>
+                    </label>
+                    <label class="feedback-form__field">
+                        <input class="feedback-form__input" type="email" name="email" placeholder=" ">
+                        <span class="feedback-form__label">Пошта</span>
+                        <svg class="feedback-form__icon">
+                            <use href="./img/sprite.svg#email"></use>
+                        </svg>
+                    </label>
+                    <label class="feedback-form__field">
+                        <textarea class="feedback-form__textarea" name="comment" placeholder="Введіть текст"></textarea>
+                        <span class="feedback-form__label feedback-form__label_textarea">Коментар</span>
+                    </label>
+                </div>
+                <label class="feedback-form__check check">
+                    <input class="check__input" type="checkbox" name="policy">
+                    <svg class="check__icon" width="16" height="15">
+                        <use class="check__icon-normality" href="./img/sprite.svg#checkbox"></use>
+                        <use class="check__icon-checked" href="./img/sprite.svg#checked"></use>
+                    </svg>
+                    <span class="check__label">Погоджуюся з розсилкою та приймаю <a class="check__link" href=""
+                            target="_blank">Умови договору</a></span>
+                </label>
+                <button class="btn feedback-form__btn" type="submit">Відправити</button>
+            </form>
         </div>
     </div>
 
     <footer class="footer">
         <div class="container footer__container">
-            <div class="footer__column">
+            <div class="footer__contacts">
                 <a class="footer__logo logo" href="./index.html"><mark>Web</mark>Studio</a>
                 <address class="footer__address">
                     <span>м. Київ, пр-т Лесі Українки, 26</span>
@@ -349,7 +389,7 @@
                 </address>
             </div>
             <div class="footer__column">
-                <b class="footer__title">приєднуйтесь</b>
+                <b class="footer__column-title">приєднуйтесь</b>
                 <ul class="footer__icons">
                     <li class="footer_icon">
                         <a href="" class="footer__icon-link" aria-label="посилання на instagram">
@@ -381,7 +421,17 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer__column"></div>
+            <div class="footer__column">
+                <b class="footer__column-title">Підпишіться на розсилку</b>
+                <form class=" footer__column subscription-form">
+                    <input class=" subscription-form__input" type="email" name="email" placeholder="E-mail">
+                    <button class="btn subscription-form__btn" type="submit">Підписатися
+                        <svg class="subscription-form__btn__icon">
+                            <use href="./img/sprite.svg#send"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
         </div>
     </footer>
 
