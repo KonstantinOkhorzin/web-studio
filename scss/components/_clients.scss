@@ -1,0 +1,30 @@
+.clients {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 170px);
+    grid-template-rows: 92px;
+    gap: 30px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #afb1b8;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    transition: all 250ms $timing-function;
+  }
+
+  &__link:hover {
+    color: $accent-color;
+    border: 1px solid $accent-color;
+  }
+
+  &__icon {
+    width: 106px;
+    height: 60px;
+    fill: currentColor;
+  }
+}

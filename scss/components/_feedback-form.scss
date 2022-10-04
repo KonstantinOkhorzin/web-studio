@@ -1,0 +1,109 @@
+.feedback-form {
+  &__inputs-group {
+    width: 100%;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__field {
+    display: block;
+    position: relative;
+    margin-top: 28px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: $secondary-text-color;
+  }
+
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 43px;
+    transform: translateY(-50%);
+    transition: all 250ms $timing-function;
+
+    &--textarea {
+      top: 12px;
+      left: 16px;
+      transform: translateY(0);
+    }
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: all 250ms var(--timing-function);
+  }
+
+  &__input {
+    height: 40px;
+    padding: 13px 10px 13px 42px;
+
+    &:focus ~ .feedback-form__icon,
+    &:hover ~ .feedback-form__icon {
+      fill: $accent-color;
+    }
+
+    &:focus,
+    &:hover {
+      border-color: $accent-color;
+      outline: 1px solid $accent-color;
+    }
+  }
+
+  &__textarea {
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+
+    &:not(:focus)::placeholder {
+      color: transparent;
+    }
+
+    &::placeholder {
+      color: rgba(117, 117, 117, 0.5);
+      font-size: 12px;
+      line-height: 1.17;
+    }
+
+    &:focus,
+    &:hover {
+      border-color: $accent-color;
+      outline: 1px solid $accent-color;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    fill: $main-text-color;
+    transition: fill 250ms $timing-function;
+  }
+
+  &__check {
+    margin-top: 20px;
+  }
+
+  &__btn {
+    display: block;
+    margin: 30px auto 0;
+    width: 200px;
+  }
+
+  &__field:focus-within > &__label,
+  &__input:not(:placeholder-shown) + &__label {
+    transform: translate(-43px, -38px);
+  }
+
+  &__field:focus-within > &__label--textarea,
+  &__textarea:not(:placeholder-shown) + &__label {
+    transform: translate(-16px, -30px);
+  }
+}

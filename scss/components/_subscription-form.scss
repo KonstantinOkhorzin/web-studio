@@ -1,0 +1,28 @@
+.subscription-form {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+
+  &__input {
+    width: 358px;
+    padding: 15px 16px;
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__btn-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+}

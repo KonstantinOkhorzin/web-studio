@@ -1,0 +1,19 @@
+.btn {
+  padding: 10px 32px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: $white-color;
+  background-color: $accent-color;
+  border-radius: 4px;
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: $timing-function;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #1177ca;
+  color: #b3aeae;
+}
