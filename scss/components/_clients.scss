@@ -17,7 +17,8 @@
     transition: all 250ms $timing-function;
   }
 
-  &__link:hover {
+  &__link:hover,
+  &__link:focus {
     color: $accent-color;
     border: 1px solid $accent-color;
   }

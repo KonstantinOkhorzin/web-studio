@@ -16,21 +16,24 @@
 
   <body class="page">
     <header class="header">
-      <nav class="header__nav container">
+      <div class="header__container container">
         <a class="logo logo--dark" href="./index.html"><mark>Web</mark>Studio</a>
-        <ul class="header__list">
-          <li class="header__list-item">
-            <a class="header__list-link" href="./index.html">Студія</a>
-          </li>
-          <li class="header__list-item">
-            <a class="header__list-link header__list-link--active" href="./portfolio.html"
-              >Портфоліо</a
-            >
-          </li>
-          <li class="header__list-item">
-            <a class="header__list-link" href="">Контакти</a>
-          </li>
-        </ul>
+        <nav class="header__nav">
+          <h2 class="header__nav-title">Головна навігація</h2>
+          <ul class="header__list">
+            <li class="header__list-item">
+              <a class="header__list-link" href="./index.html">Студія</a>
+            </li>
+            <li class="header__list-item">
+              <a class="header__list-link header__list-link--active" href="./portfolio.html"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="header__list-item">
+              <a class="header__list-link" href="">Контакти</a>
+            </li>
+          </ul>
+        </nav>
         <address class="header__address">
           <a class="header__address-link" href="mailto:info@devstudio.com">
             <svg class="header__address-icon" width="16" height="12">
@@ -45,14 +48,14 @@
             +38 096 111 11 11
           </a>
         </address>
-      </nav>
+      </div>
     </header>
 
     <main class="page__main">
       <section class="section portfolio">
         <div class="container">
           <h1 class="portfolio__title">Портфоліо</h1>
-          <ul class="portfolio__btns">
+          <menu class="portfolio__btns">
             <li class="portfolio__btns-item">
               <button class="portfolio__btn portfolio__btn--active">Усі</button>
             </li>
@@ -68,7 +71,7 @@
             <li class="portfolio__btns-item">
               <button class="portfolio__btn">Маркетинг</button>
             </li>
-          </ul>
+          </menu>
 
           <ul class="portfolio__list-projects">
             <li class="portfolio__project">

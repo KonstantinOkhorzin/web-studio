@@ -1,14 +1,22 @@
 .header {
   border-bottom: 1px solid #ececec;
 
+  &__container {
+    display: flex;
+  }
+
   &__nav {
     display: flex;
     align-items: center;
+    margin-left: 93px;
+  }
+
+  &__nav-title {
+    @include visually-hidden;
   }
 
   &__list {
     display: flex;
-    margin-left: 93px;
   }
 
   &__list-item:not(:last-child) {

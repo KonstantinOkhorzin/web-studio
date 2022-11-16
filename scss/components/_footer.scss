@@ -52,7 +52,8 @@
     transition: background-color 250ms $timing-function;
   }
 
-  &__icon-link:hover {
+  &__icon-link:hover,
+  &__icon-link:focus {
     background-color: $accent-color;
   }
 
