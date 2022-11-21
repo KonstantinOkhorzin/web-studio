@@ -5,14 +5,15 @@
 
   &__btns {
     display: flex;
-    justify-content: center;
-    gap: 8px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 15px 8px;
   }
 
   &__btn {
     background: #f5f4fa;
     display: block;
-    padding: 6px 22px;
+    padding: 6px 25px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
@@ -32,17 +33,58 @@
 
   &__list-projects {
     margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   &__project {
-    width: calc((100% - 60px) / 3);
+    width: 100%;
+
+    @media screen and (min-width: $tablet) {
+      width: calc((100% - 30px) / 2);
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 60px) / 3);
+    }
+    
+    &:not(:last-child) {
+      @media screen and (max-width: 1199px) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &:not(:nth-last-child(-n + 3)) {
+      @media screen and (min-width: $desktop) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &:not(:nth-child(2n)) {
+      @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        margin-right: 30px;
+      }
+    }
+
+    &:not(:nth-child(3n)) {
+      @media screen and (min-width: $desktop) {
+        margin-right: 30px;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
   }
 
-  &__project:hover {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-      1px 4px 6px rgba(0, 0, 0, 0.16);
+  &__project-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 
   &__project-link:hover &__project-descr,
@@ -50,20 +92,17 @@
     transform: translateY(0);
   }
 
-  &__project:not(:nth-child(3n)) {
-    margin-right: 30px;
-  }
-
-  &__project:not(:nth-last-child(-n + 3)) {
-    margin-bottom: 30px;
-  }
-
   &__project-thumb {
     position: relative;
     overflow: hidden;
   }
 
+  &__project-img {
+    width: 100%;
+  }
+
   &__project-text {
+    flex-grow: 1;
     background: $white-color;
     border: 1px solid #eeeeee;
     border-top: none;

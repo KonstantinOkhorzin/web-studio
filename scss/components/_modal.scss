@@ -3,11 +3,19 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 528px;
+  width: 100%;
   padding: 40px;
   background-color: $white-color;
   border-radius: 4px;
   transition: transform 250ms $timing-function;
+
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 528px;
+  }
 
   .backdrop--hidden & {
     transform: translate(-50%, -50%) scale(1.5);

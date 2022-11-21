@@ -4,12 +4,21 @@
   }
 
   &__list {
-    display: flex;
-    gap: 30px;
+    @media screen and (min-width: $tablet) {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: $desktop) {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 
-  &__item {
-    width: 25%;
+  &__item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
   }
 
   &__item:hover &__item-title:before {
@@ -40,26 +49,30 @@
   }
 
   &__item-title {
-    position: relative;
-    display: inline-block;
+    text-align: center;
     font-weight: 700;
     line-height: 1.14;
     text-transform: uppercase;
-  }
 
-  &__item-title:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    display: block;
-    height: 3px;
-    width: 100%;
-    border-radius: 4px;
-    background-color: $accent-color;
-    transform-origin: center left;
-    transform: scale(0);
-    transition: transform 250ms $timing-function;
+    @media screen and (min-width: $desktop) {
+      position: relative;
+      display: inline-block;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        display: block;
+        height: 3px;
+        width: 100%;
+        border-radius: 4px;
+        background-color: $accent-color;
+        transform-origin: center left;
+        transform: scale(0);
+        transition: transform 250ms $timing-function;
+      }
+    }
   }
 
   &__item-descr {

@@ -3,6 +3,8 @@
 
   &__container {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__nav {
@@ -39,7 +41,7 @@
   }
 
   &__list-link--active:before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     bottom: -1px;
@@ -79,5 +81,55 @@
   &__address-link:hover,
   &__address-link:focus {
     color: $accent-color;
+  }
+
+  &__btn-burger {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__icon-burger,
+  &__btn-burger::before,
+  &__btn-burger::after {
+    position: absolute;
+    left: 8px;
+    width: 24px;
+    height: 3px;
+    background-color: $main-text-color;
+    transition: transform 250ms $timing-function;
+  }
+
+  &__icon-burger {
+    top: 50%;
+    transform: scale(1) translate(0px, -50%);
+  }
+
+  &__btn-burger::before {
+    top: 12px;
+  }
+
+  &__btn-burger::after {
+    bottom: 12px;
+  }
+
+  &__btn-burger::before,
+  &__btn-burger::after {
+    content: '';
+  }
+
+  &__btn-burger--opened &__icon-burger {
+    transform: scale(0) translate(0px, -50%);
+  }
+
+  &__btn-burger--opened::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(1px, -50%);
+  }
+
+  &__btn-burger--opened::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(1px, 50%);
   }
 }

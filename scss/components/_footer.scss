@@ -1,20 +1,40 @@
 .footer {
-  margin-top: 94px;
+  margin-top: 60px;
   padding: 60px 0;
   background: #2f303a;
 
+  @media screen and (min-width: $desktop) {
+    margin-top: 94px;
+  }
+
   &__container {
-    display: flex;
-    justify-content: space-between;
+    @media screen and (max-width: 1199px) {
+      display: grid;
+      gap: 60px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__address {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 9px;
     line-height: 1.71;
     color: $white-color;
+
+    @media screen and (min-width: $desktop) {
+      align-items: flex-start;
+    }
   }
 
   &__address-link {
@@ -22,8 +42,27 @@
     line-height: 1.71;
   }
 
-  &__column {
-    padding-top: 12px;
+  &__contacts,
+  &__column-social,
+  &__column-form {
+    @media screen and (max-width: 1199px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__column-form {
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      grid-column: span 2;
+    }
+  }
+
+  &__column-social,
+  &__column-form {
+    @media screen and (min-width: $desktop) {
+      padding-top: 12px;
+    }
   }
 
   &__column-title {
