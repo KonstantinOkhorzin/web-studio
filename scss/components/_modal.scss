@@ -1,8 +1,5 @@
 .modal {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  position: relative;
   width: 100%;
   padding: 40px;
   background-color: $white-color;
@@ -11,6 +8,17 @@
 
   @media screen and (min-width: $mobile) {
     width: 450px;
+  }
+
+  @media screen and (min-width: $mobile) and (max-width: 767px){
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
   }
 
   @media screen and (min-width: $desktop) {
@@ -56,4 +64,8 @@
     color: $main-text-color;
     text-align: center;
   }
+}
+
+body.open-modal {
+  overflow: hidden;
 }

@@ -9,6 +9,7 @@ refs.closeModalBtn.addEventListener('click', toggleModal);
 
 function toggleModal() {
   refs.backdrop.classList.toggle('backdrop--hidden');
+  document.body.classList.toggle('open-modal');
 }
 
 const menuBtnRef = document.querySelector('.header__btn-burger');

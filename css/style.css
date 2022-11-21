@@ -788,6 +788,8 @@ address {
   opacity: 1;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 50px 15px;
+  overflow-y: scroll;
 }
 .backdrop--hidden {
   opacity: 0;
@@ -795,11 +797,7 @@ address {
 }
 
 .modal {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
+  position: relative;
   width: 100%;
   padding: 40px;
   background-color: #FFFFFF;
@@ -812,6 +810,20 @@ address {
 @media screen and (min-width: 480px) {
   .modal {
     width: 450px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .modal {
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -860,6 +872,10 @@ address {
   letter-spacing: 0.03em;
   color: #212121;
   text-align: center;
+}
+
+body.open-modal {
+  overflow: hidden;
 }
 
 .feedback-form__inputs-group {
