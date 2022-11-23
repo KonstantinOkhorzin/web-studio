@@ -8,7 +8,7 @@
   }
 
   &__container {
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: $tablet-max) {
       display: grid;
       gap: 60px;
     }
@@ -38,14 +38,14 @@
   }
 
   &__address-link {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgb(255 255 255 / .6);
     line-height: 1.71;
   }
 
   &__contacts,
   &__column-social,
   &__column-form {
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: $tablet-max) {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -53,7 +53,7 @@
   }
 
   &__column-form {
-    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    @media screen and (min-width: $tablet) and (max-width: $tablet-max) {
       grid-column: span 2;
     }
   }
@@ -86,7 +86,7 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgb(255 255 255 / .1);
     color: $white-color;
     transition: background-color 250ms $timing-function;
   }

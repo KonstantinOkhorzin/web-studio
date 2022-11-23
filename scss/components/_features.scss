@@ -16,7 +16,7 @@
   }
 
   &__item:not(:last-child) {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: $mobile-max) {
       margin-bottom: 30px;
     }
   }

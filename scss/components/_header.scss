@@ -1,16 +1,45 @@
 .header {
+  position: relative;
   border-bottom: 1px solid #ececec;
 
   &__container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+  }
+
+  &__menu-container {
+    display: flex;
+    @media screen and (max-width: $mobile-max) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      min-height: 100vh;
+      padding: 48px 40px;
+      background-color: $white-color;
+
+      &--opened {
+        display: flex;
+      }
+    }
+
+    @media screen and (min-width: $tablet) {
+      justify-content: space-between;
+      align-items: center;
+      flex-grow: 1;
+      margin-left: 87px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-left: 92px;
+    }
   }
 
   &__nav {
-    display: flex;
-    align-items: center;
-    margin-left: 93px;
+    flex-grow: 1;
   }
 
   &__nav-title {
@@ -19,6 +48,10 @@
 
   &__list {
     display: flex;
+    @media screen and (max-width: $mobile-max) {
+      flex-direction: column;
+      gap: 32px;
+    }
   }
 
   &__list-item:not(:last-child) {
@@ -26,14 +59,22 @@
   }
 
   &__list-link {
-    position: relative;
     display: block;
-    padding: 32px 0;
     font-weight: 500;
-    line-height: 1.14;
+    line-height: 1.18;
     letter-spacing: 0.02em;
     color: $main-text-color;
     transition: color 250ms $timing-function;
+
+    @media screen and (max-width: $mobile-max) {
+      font-size: 40px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      position: relative;
+      padding: 32px 0;
+      line-height: 1.14;
+    }
   }
 
   &__list-link--active {
@@ -41,39 +82,75 @@
   }
 
   &__list-link--active:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: $accent-color;
-    border-radius: 2px;
+    @media screen and (min-width: $tablet) {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: $accent-color;
+      border-radius: 2px;
+    }
   }
 
   &__address {
     display: flex;
-    margin-left: auto;
+    @media screen and (min-width: $tablet) and (max-width: $tablet-max) {
+      gap: 10px;
+    }
+    @media screen and (max-width: $tablet-max) {
+      flex-direction: column;
+    }
   }
 
   &__address-link {
     display: flex;
     gap: 10px;
-    padding: 32px 0;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: $secondary-text-color;
     transition: color 250ms $timing-function;
+
+    @media screen and (max-width: $mobile-max) {
+      padding: 16px 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 32px 0;
+    }
+  }
+
+  &__address-tel {
+    @media screen and (max-width: $mobile-max) {
+      order: -1;
+      width: 100%;
+      font-size: 34px;
+      line-height: 1.18;
+      color: #2196f3;
+    }
+  }
+
+  &__address-mail {
+    @media screen and (max-width: $mobile-max) {
+      font-size: 24px;
+      line-height: 1.67;
+    }
   }
 
   &__address-icon {
     fill: currentColor;
+    @media screen and (max-width: $mobile-max) {
+      display: none;
+    }
   }
 
   &__address-link:not(:last-child) {
-    margin-right: 50px;
+    @media screen and (min-width: $desktop) {
+      margin-right: 50px;
+    }
   }
 
   &__list-link:hover,
@@ -84,10 +161,17 @@
   }
 
   &__btn-burger {
-    position: relative;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 1;
     display: block;
     width: 40px;
     height: 40px;
+
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
   }
 
   &__icon-burger,
@@ -132,4 +216,40 @@
     bottom: 50%;
     transform: rotate(45deg) translate(1px, 50%);
   }
+
+  &__social-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 48px;
+
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__social-item:not(:last-child) {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -9.5px;
+      width: 1px;
+      height: 100%;
+      background-color: rgb(33 33 33 / 0.2);
+    }
+  }
+
+  &__social-link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+  }
+}
+
+body.open-menu {
+  overflow: hidden;
 }

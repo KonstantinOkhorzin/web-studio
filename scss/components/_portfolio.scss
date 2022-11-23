@@ -52,7 +52,7 @@
     }
     
     &:not(:last-child) {
-      @media screen and (max-width: 1199px) {
+      @media screen and (max-width: $tablet-max) {
         margin-bottom: 30px;
       }
     }
@@ -64,7 +64,7 @@
     }
 
     &:not(:nth-child(2n)) {
-      @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      @media screen and (min-width: $tablet) and (max-width: $tablet-max) {
         margin-right: 30px;
       }
     }
