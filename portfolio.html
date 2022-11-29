@@ -15,41 +15,66 @@
   </head>
 
   <body class="page">
-    <!-- <header class="header">
+    <header class="header">
       <div class="header__container container">
         <a class="logo logo--dark" href="./index.html"><mark>Web</mark>Studio</a>
-        <nav class="header__nav">
-          <h2 class="header__nav-title">Головна навігація</h2>
-          <ul class="header__list">
-            <li class="header__list-item">
-              <a class="header__list-link" href="./index.html">Студія</a>
+        <div class="header__menu-container" id="mobile-menu">
+          <nav class="header__nav">
+            <h2 class="header__nav-title">Головна навігація</h2>
+            <ul class="header__list">
+              <li class="header__list-item">
+                <a class="header__list-link" href="./index.html"
+                  >Студія</a
+                >
+              </li>
+              <li class="header__list-item">
+                <a class="header__list-link header__list-link--active" href="./portfolio.html">Портфоліо</a>
+              </li>
+              <li class="header__list-item">
+                <a class="header__list-link" href="">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="header__address">
+            <a class="header__address-link header__address-mail" href="mailto:info@devstudio.com">
+              <svg class="header__address-icon" width="16" height="12">
+                <use href="./img/sprite.svg#envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+            <a class="header__address-link header__address-tel" href="tel:+380961111111">
+              <svg class="header__address-icon" width="10" height="16">
+                <use href="./img/sprite.svg#smartphone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </address>
+          <ul class="header__social-list">
+            <li class="header__social-item">
+              <a href="#" class="header__social-link">Instagram</a>
             </li>
-            <li class="header__list-item">
-              <a class="header__list-link header__list-link--active" href="./portfolio.html"
-                >Портфоліо</a
-              >
+            <li class="header__social-item">
+              <a href="#" class="header__social-link">Twitter</a>
             </li>
-            <li class="header__list-item">
-              <a class="header__list-link" href="">Контакти</a>
+            <li class="header__social-item">
+              <a href="#" class="header__social-link">Facebook</a>
+            </li>
+            <li class="header__social-item">
+              <a href="#" class="header__social-link">LinkedIn</a>
             </li>
           </ul>
-        </nav>
-        <address class="header__address">
-          <a class="header__address-link" href="mailto:info@devstudio.com">
-            <svg class="header__address-icon" width="16" height="12">
-              <use href="./img/sprite.svg#envelope"></use>
-            </svg>
-            info@devstudio.com
-          </a>
-          <a class="header__address-link" href="tel:+380961111111">
-            <svg class="header__address-icon" width="10" height="16">
-              <use href="./img/sprite.svg#smartphone"></use>
-            </svg>
-            +38 096 111 11 11
-          </a>
-        </address>
+        </div>
+        <button
+          class="header__btn-burger"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="перемикач мобільного меню"
+        >
+          <span class="header__icon-burger"></span>
+        </button>
       </div>
-    </header> -->
+    </header>
 
     <main class="page__main">
       <section class="section portfolio">

@@ -1,0 +1,20 @@
+.img-set {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media screen and (min-width: $mobile) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: $tablet) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: $desktop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

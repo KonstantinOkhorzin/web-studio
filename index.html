@@ -64,8 +64,14 @@
             </li>
           </ul>
         </div>
-        <button class="header__btn-burger" type="button" aria-expanded="false" aria-controls="mobile-menu">
-          <span class="header__icon-burger" aria-label="перемикач мобільного меню"></span>
+        <button
+          class="header__btn-burger"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="перемикач мобільного меню"
+        >
+          <span class="header__icon-burger"></span>
         </button>
       </div>
     </header>
@@ -137,15 +143,73 @@
           <ul class="services__list">
             <li class="services__item">
               <h2 class="services__title">Десктопні додатки</h2>
-              <img class="services__img" src="./img/services/box1.jpg" alt="image" width="370" />
+              <img
+                class="services__img"
+                srcset="
+                  ./img/services/box1.jpg    1x,
+                  ./img/services/box1-2x.jpg 2x,
+                  ./img/services/box1-3x.jpg 3x
+                "
+                src="./img/services/box1-3x.jpg"
+                alt="image"
+                width="370"
+              />
             </li>
             <li class="services__item">
               <h2 class="services__title">Мобільні додатки</h2>
-              <img class="services__img" src="./img/services/box2.jpg" alt="image" width="370" />
+              <picture>
+                <source
+                  srcset="
+                    ./img/services/box2.webp    1x,
+                    ./img/services/box2-2x.webp 2x,
+                    ./img/services/box2-3x.webp 3x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  class="services__img"
+                  srcset="
+                    ./img/services/box2.jpg    1x,
+                    ./img/services/box2-2x.jpg 2x,
+                    ./img/services/box2-3x.jpg 3x
+                  "
+                  src="./img/services/box2-3x.jpg"
+                  alt="image"
+                  width="370"
+                />
+              </picture>
             </li>
             <li class="services__item">
               <h2 class="services__title">Мобільні додатки</h2>
-              <img class="services__img" src="./img/services/box3.jpg" alt="image" width="370" />
+              <picture>
+                <source
+                  srcset="
+                    ./img/services/box3.avif    1x,
+                    ./img/services/box3-2x.avif 2x,
+                    ./img/services/box3-3x.avif 3x
+                  "
+                  type="image/avif"
+                />
+                <source
+                  srcset="
+                    ./img/services/box3.webp    1x,
+                    ./img/services/box3-2x.webp 2x,
+                    ./img/services/box3-3x.webp 3x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  class="services__img"
+                  srcset="
+                    ./img/services/box3.jpg    1x,
+                    ./img/services/box3-2x.jpg 2x,
+                    ./img/services/box3-3x.jpg 3x
+                  "
+                  src="./img/services/box3-3x.jpg"
+                  alt="image"
+                  width="370"
+                />
+              </picture>
             </li>
           </ul>
         </div>
@@ -354,6 +418,180 @@
               </a>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <ul class="img-set">
+          <li>
+            <img
+              srcset="
+                img/image/image-370.jpg   370w,
+                img/image/image-555.jpg   555w,
+                img/image/image-740.jpg   740w,
+                img/image/image-1110.jpg 1110w,
+                img/image/image-1480.jpg 1480w
+              "
+              src="img/image/image-1480.jpg"
+              alt=""
+              sizes="(min-width: 1200px) 25vw, (min-width: 768px) 33vw, (min-width: 480px) 50vw, 100vw"
+              loading="lazy"
+            />
+          </li>
+          <li>
+            <picture>
+              <source
+                srcset="
+                  img/image/image-370.webp   370w,
+                  img/image/image-555.webp   555w,
+                  img/image/image-740.webp   740w,
+                  img/image/image-1110.webp 1110w,
+                  img/image/image-1480.webp 1480w
+                "
+                type="image/webp"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 33vw, (min-width: 480px) 50vw, 100vw"
+              />
+              <img
+                srcset="
+                  img/image/image-370.jpg   370w,
+                  img/image/image-555.jpg   555w,
+                  img/image/image-740.jpg   740w,
+                  img/image/image-1110.jpg 1110w,
+                  img/image/image-1480.jpg 1480w
+                "
+                src="img/image/image-1480.jpg"
+                alt=""
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 33vw, (min-width: 480px) 50vw, 100vw"
+                loading="lazy"
+              />
+            </picture>
+          </li>
+          <li>
+            <picture>
+              <source
+                srcset="
+                  img/image/image-370.avif   370w,
+                  img/image/image-555.avif   555w,
+                  img/image/image-740.avif   740w,
+                  img/image/image-1110.avif 1110w,
+                  img/image/image-1480.avif 1480w
+                "
+                type="image/avif"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 33vw, (min-width: 480px) 50vw, 100vw"
+              />
+              <img
+                srcset="
+                  img/image/image-370.jpg   370w,
+                  img/image/image-555.jpg   555w,
+                  img/image/image-740.jpg   740w,
+                  img/image/image-1110.jpg 1110w,
+                  img/image/image-1480.jpg 1480w
+                "
+                src="img/image/image-1480.jpg"
+                alt=""
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 33vw, (min-width: 480px) 50vw, 100vw"
+                loading="lazy"
+              />
+            </picture>
+          </li>
+          <li>
+            <picture>
+              <source
+                srcset="
+                  img/image/image-370.avif   370w,
+                  img/image/image-555.avif   555w,
+                  img/image/image-740.avif   740w,
+                  img/image/image-1110.avif 1110w,
+                  img/image/image-1480.avif 1480w
+                "
+                type="image/avif"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 33vw, (min-width: 480px) 50vw, 100vw"
+              />
+              <source
+                srcset="
+                  img/image/image-370.webp   370w,
+                  img/image/image-555.webp   555w,
+                  img/image/image-740.webp   740w,
+                  img/image/image-1110.webp 1110w,
+                  img/image/image-1480.webp 1480w
+                "
+                type="image/webp"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 33vw, (min-width: 480px) 50vw, 100vw"
+              />
+              <img
+                srcset="
+                  img/image/image-370.jpg   370w,
+                  img/image/image-555.jpg   555w,
+                  img/image/image-740.jpg   740w,
+                  img/image/image-1110.jpg 1110w,
+                  img/image/image-1480.jpg 1480w
+                "
+                src="img/image/image-1480.jpg"
+                alt=""
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 33vw, (min-width: 480px) 50vw, 100vw"
+                loading="lazy"
+              />
+            </picture>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="
+                ./img/hero/hero-1600-1x.webp 1x,
+                ./img/hero/hero-1600-2x.webp 2x,
+                ./img/hero/hero-1600-3x.webp 3x
+              "
+              media="(min-width: 1200px)"
+            />
+            <source
+              srcset="
+                ./img/hero/hero-1600-1x.jpg 1x,
+                ./img/hero/hero-1600-2x.jpg 2x,
+                ./img/hero/hero-1600-3x.jpg 3x
+              "
+              media="(min-width: 1200px)"
+            />
+            <source
+              type="image/webp"
+              srcset="
+                ./img/hero/hero-768-1x.webp 1x,
+                ./img/hero/hero-768-2x.webp 2x,
+                ./img/hero/hero-768-3x.webp 3x
+              "
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="
+                ./img/hero/hero-768-1x.jpg 1x,
+                ./img/hero/hero-768-2x.jpg 2x,
+                ./img/hero/hero-768-3x.jpg 3x
+              "
+              media="(min-width: 768px)"
+            />
+            <source
+              type="image/webp"
+              srcset="
+                ./img/hero/hero-480-1x.webp 1x,
+                ./img/hero/hero-480-2x.webp 2x,
+                ./img/hero/hero-480-3x.webp 3x
+              "
+              media="(max-width: 767px)"
+            />
+            <source
+              srcset="
+                ./img/hero/hero-480-1x.jpg 1x,
+                ./img/hero/hero-480-2x.jpg 2x,
+                ./img/hero/hero-480-3x.jpg 3x
+              "
+              media="(max-width: 767px)"
+            />
+            <img src="./img/hero/hero-1600-3x.jpg" alt="image" />
+          </picture>
         </div>
       </section>
     </main>
