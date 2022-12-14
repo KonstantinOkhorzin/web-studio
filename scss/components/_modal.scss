@@ -4,13 +4,18 @@
   padding: 40px;
   background-color: $white-color;
   border-radius: 4px;
+  transform: scale(1.5);
   transition: transform 250ms $timing-function;
+
+  body.show-modal & {
+    transform: scale(1);
+  }
 
   @media screen and (min-width: $mobile) {
     width: 450px;
   }
 
-  @media screen and (min-width: $mobile) and (max-width: $mobile-max){
+  @media screen and (min-width: $mobile) and (max-width: $mobile-max) {
     margin: 0 auto;
   }
 
@@ -18,15 +23,15 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1.5);
+
+    body.show-modal & {
+      transform: translate(-50%, -50%) scale(1);
+    }
   }
 
   @media screen and (min-width: $desktop) {
     width: 528px;
-  }
-
-  .backdrop--hidden & {
-    transform: translate(-50%, -50%) scale(1.5);
   }
 
   &__close {
@@ -39,7 +44,7 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: 1px solid rgb(0 0 0 / .1);
+    border: 1px solid rgb(0 0 0 / 0.1);
     color: $black-color;
     transition: color 250ms $timing-function;
   }
@@ -66,6 +71,6 @@
   }
 }
 
-body.open-modal {
+body.show-modal {
   overflow: hidden;
 }

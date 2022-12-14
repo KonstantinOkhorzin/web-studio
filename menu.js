@@ -1,19 +1,3 @@
-const refs = {
-  openModalBtn: document.querySelector('[data-open-modal]'),
-  closeModalBtn: document.querySelector('[data-close-modal]'),
-  backdrop: document.querySelector('[data-backdrop]'),
-};
-
-refs.openModalBtn.addEventListener('click', toggleModal);
-refs.closeModalBtn.addEventListener('click', toggleModal);
-
-function toggleModal() {
-  refs.backdrop.classList.toggle('backdrop--hidden');
-  document.body.classList.toggle('open-modal');
-}
-
-
-
 const menuBtnRef = document.querySelector('.header__btn-burger');
 const mobileMenuRef = document.querySelector('.header__menu-container');
 
